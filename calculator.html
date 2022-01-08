@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function calculation(received){
+                x=parseInt(document.getElementById("num1").value)
+                y=parseInt(document.getElementById("num2").value)
+
+                if(received=='add'){
+                    result=x+y
+                }
+                if(received=='sub'){
+                    result=(x-y)
+                }
+                if(received=='mul'){
+                    result=x*y
+                }
+                if (received=='div'){
+                    result=x/y
+                }
+                if(received=='sqrt'){
+                    result=Math.sqrt(x)
+                }
+                if(received=='pow'){
+                    result=x**y
+                }
+                document.getElementById("result").value=result
+        }
+    </script>
+</head>
+<body style="background-color: chartreuse;">
+    <h1 style="text-align: center;font-family: Comic Sans Ms; color: crimson;">Calculator</h1>
+    <form>
+    <div style="text-align: center; background-color: darkgrey;font-size: x-large;">
+    NUM_1<input type="number" name="num1" id="num1" required><br>
+    NUM_2<input type="number" name="num2" id="num2" ><br>
+    RESULT<input type="number" name="result" id="result"><br>
+    <button type="button" onclick="calculation('add')">+</button>
+    <button type="button" onclick="calculation('sub')">-</button><br>
+    <button type="button" onclick="calculation('mul')">*</button>
+    <button type="button" onclick="calculation('div')">/</button><br>
+    <button type="button" onclick="calculation('sqrt')">squareroot</button>
+    <button type="button" onclick="calculation('pow')">power</button><br>
+    <Button type="reset" style="font-size: x-large;">RESET</Button>
+    </div>
+    </form>
+
+    
+    </div>
+
+    
+</body>
+</html>
